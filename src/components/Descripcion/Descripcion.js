@@ -1,11 +1,6 @@
 import React from 'react'
 import './_descripcion.scss'
 
-
-
-
-
-
 export const Descripcion = () => {
 
     return(
