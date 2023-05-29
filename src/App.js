@@ -16,6 +16,7 @@ function App() {
       <Secciones/>
       <Descripcion/>
       <Book/>
+      <Descripcion/>
     </div>
   );
 }
