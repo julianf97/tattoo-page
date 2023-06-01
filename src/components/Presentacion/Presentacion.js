@@ -1,5 +1,6 @@
 import React from 'react'
-import './_presentacion.scss'
+import './_presentacionMobile.scss'
+import './_presentacionIpad.scss'
 
 
 export const Presentacion = () => {

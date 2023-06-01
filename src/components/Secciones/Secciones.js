@@ -1,5 +1,6 @@
 import React from 'react'
-import './_secciones.scss'
+import './_seccionesMobile.scss'
+import './_seccionesIpad.scss'
 
 
 export const Secciones = () => {

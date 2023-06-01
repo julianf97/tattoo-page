@@ -1,7 +1,8 @@
 import React from 'react';
-import './_ending.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import './_endingMobile.scss';
+import './_endingIpad.scss';
 
 
 export const Ending = () => {

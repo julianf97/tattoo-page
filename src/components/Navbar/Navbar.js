@@ -1,5 +1,6 @@
 import React from 'react'
-import './_navbar.scss'
+import './_navbarIpad.scss'
+import './_navbarMobile.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -22,7 +23,8 @@ export const Navbar = () => {
                             <img src={italia} alt="lenguajeImg"></img>
                         </div>
                     </div>
-                    <span className='btnIdioma'>ITA <FontAwesomeIcon className='anguloDerecho' icon={faAngleRight}></FontAwesomeIcon>  </span> 
+                    <span className='btnIdioma'>ITA </span>
+                    <FontAwesomeIcon className='anguloDerecho' icon={faAngleRight}></FontAwesomeIcon>  
                 </div>
             </div>
        </div>
