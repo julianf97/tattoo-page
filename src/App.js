@@ -6,16 +6,16 @@ import { Book } from './components/Book/Book';
 import { Ending } from './components/Ending/Ending';
 import './App.css';
 
-
-
-
 function App() {
+
+
+
   return (
     <div className="App">
       <Navbar/>
       <Presentacion/>
       <Secciones/>
-      <Descripcion/>
+      <Descripcion />
       <Book/>
       <Ending/>
     </div>

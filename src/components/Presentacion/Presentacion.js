@@ -1,6 +1,7 @@
 import React from 'react'
 import './_presentacionMobile.scss'
 import './_presentacionIpad.scss'
+import './_presentacionDesktop.scss'
 
 
 export const Presentacion = () => {
