@@ -3,6 +3,7 @@ import { faAnchor} from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
 import './_bookMobile.scss'
 import './_bookIpad.scss'
+import './_bookDesktop.scss'
 
 export const Book = () => {
 

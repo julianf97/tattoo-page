@@ -1,6 +1,7 @@
 import React from 'react'
 import './_descripcionMobile.scss'
 import './_descripcionIpad.scss'
+import './_descripcionDesktop.scss'
 
 export const Descripcion = () => {
 

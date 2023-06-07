@@ -1,10 +1,10 @@
 
-// Mobile
+// Desktop
 
-@media (max-width:600px){ 
+@media only screen and (min-width:1026px){
     .contenedorBook{
         width: 100%;
-        height: 95vh;
+        height: 88vh;
         background-image: url("../../../public/img/presentacion2.jpg"); 
         background-color: #00000000; 
         background-position: center; 
@@ -31,7 +31,7 @@
             align-items: center;
             h3{
                 display: block;
-                font-size: 1.5em;
+                font-size: 1.8em;
                 margin-block-start: 0.83em;
                 margin-block-end: 0.83em;
                 margin-inline-start: 0px;
@@ -46,13 +46,14 @@
             display: flex;
             justify-content: center;
             .contenedorInteriorParrafo{
-                width: 80%;
+                width: 70%;
                 height: 100%;
                 .parrafoPrimero{
                     color: #fff;
-                    font-size: 16px;
+                    font-size: 18px;
                     line-height: 26px;
                     font-style: italic;
+                    font-weight: 500;
                 }
             }
         }
@@ -94,4 +95,4 @@
             }
         }
     }
-}
+} 

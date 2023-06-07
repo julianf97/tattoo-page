@@ -7,7 +7,6 @@
         height: 50px;
         position: fixed;
         background-color: rgba(0, 0, 0, 0.432);
-        display: flex;
         justify-content: center;
         z-index: 500000;
         .contenedorInternoNavbar{
@@ -36,8 +35,15 @@
                 display: flex;
                 align-items: center;
                 color: #ffffffec;
-                justify-content: center;
-                margin-top: 1.5px;
+                justify-content: end;
+                .contenedorInternoElementosIdioma{
+                    display: flex;
+                    align-items: center;
+                    color: #ffffffec;
+                    justify-content: center;
+                    width: auto;
+                    cursor: pointer;
+                }
 
                 .contenedorImg{
                     width: 25px;
@@ -46,7 +52,8 @@
                     justify-content: center;
                     align-items: center;
                     margin-right: -2px;
-                    margin-left: 55px;
+                    margin-top: 0.8px;
+                    cursor: pointer;
                     .contenedorInternoImg{
                         width: 16px;
                         height: 16px;
@@ -61,13 +68,15 @@
                 .btnIdioma{
                     margin-left: 2px;
                     margin-top: 2px;
+                    cursor: pointer;
                 }
                 .anguloDerecho{
                     font-size: 15px;
                     color: #ffffffd8;
                     margin-bottom: 1px;
-                    margin-left: 4px;
+                    margin-left: 6px;
                     margin-top: 4px;
+                    cursor: pointer;
                 }
             }
         }

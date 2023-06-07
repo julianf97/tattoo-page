@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './_endingMobile.scss';
 import './_endingIpad.scss';
+import './_endingDesktop.scss';
 
 
 export const Ending = () => {
