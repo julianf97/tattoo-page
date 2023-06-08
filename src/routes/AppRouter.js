@@ -22,16 +22,16 @@ export const AppRouter = () => {
         <Presentacion/>
         <Secciones/>
         {
-            inglesElegido ? <Descripcion/>
-                            : <DescripcionItaliano/>
-        }
-                {
-            inglesElegido ? <Book/>
-                            : <BookItaliano/>
+          inglesElegido ? <Descripcion/>
+                        : <DescripcionItaliano/>
         }
         {
-            inglesElegido ? <Ending/>
-                            : <EndingItaliano/>
+          inglesElegido ? <Book/>
+                        : <BookItaliano/>
+        }
+        {
+          inglesElegido ? <Ending/>
+                        : <EndingItaliano/>
         }
     </div>    
   );

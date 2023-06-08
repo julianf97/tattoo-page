@@ -13,7 +13,13 @@ import { LenguajeContext } from "../../context/LenguajeContext/LenguajeContext"
 
 export const Navbar = () => {
 
-    const { idioma, handleClickModal, handleClickIngles, handleClickItaliano} = useContext(LenguajeContext)
+    const { 
+            idioma, 
+            handleClickModal, 
+            handleClickIngles, 
+            handleClickItaliano, 
+            inglesElegido
+            } = useContext(LenguajeContext)
 
     return(
        <div className='contenedorNavbar'>
@@ -26,10 +32,16 @@ export const Navbar = () => {
                     <div onClick={handleClickModal} className='contenedorInternoElementosIdioma'>
                         <div className='contenedorImg'>
                             <div className='contenedorInternoImg'>
-                                <img src={italia} alt="lenguajeImg"></img>
+                                {
+                                    inglesElegido ?  <img className='imagenReinoUnidoElegida' src={reinoUnido} alt="lenguajeImg"></img>
+                                                    : <img src={italia} alt="lenguajeImg"></img>
+                                }
                             </div>
                         </div>
-                        <span className='btnIdioma'>ITA </span>
+                        {
+                            inglesElegido ? <span className='btnIdioma'>ENG </span>
+                                            : <span className='btnIdioma'>ITA </span> 
+                        }
                         {
                             idioma ? <FontAwesomeIcon className='anguloRotado' icon={faAngleRight}></FontAwesomeIcon> 
                                 : <FontAwesomeIcon className='anguloDerecho' icon={faAngleRight}></FontAwesomeIcon> 
