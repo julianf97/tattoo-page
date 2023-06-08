@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import  italia  from "../../assets/img/italia.png"
+import  reinoUnido  from "../../assets/img/reinoUnido.png"
 
 export const Navbar = () => {
 
@@ -19,9 +20,10 @@ export const Navbar = () => {
         } else {
             setIdioma(false)
         }
-
-        console.log(idioma)
     }
+
+
+
 
     return(
        <div className='contenedorNavbar'>
@@ -29,9 +31,7 @@ export const Navbar = () => {
                 <div className='contenedorBarras'>
                     <FontAwesomeIcon className='barras' icon={faBars}></FontAwesomeIcon>
                 </div>
-                <div className='contenedorMedio'>
-
-                </div>
+                <div className='contenedorMedio'></div>
                 <div className='contenedorIdioma'>
                     <div onClick={handleClickIdioma} className='contenedorInternoElementosIdioma'>
                         <div className='contenedorImg'>
@@ -40,7 +40,45 @@ export const Navbar = () => {
                             </div>
                         </div>
                         <span className='btnIdioma'>ITA </span>
-                        <FontAwesomeIcon className='anguloDerecho' icon={faAngleRight}></FontAwesomeIcon>  
+                        {
+                            idioma ? <FontAwesomeIcon className='anguloRotado' icon={faAngleRight}></FontAwesomeIcon> 
+                                : <FontAwesomeIcon className='anguloDerecho' icon={faAngleRight}></FontAwesomeIcon> 
+                        }
+                    </div>
+                </div>
+            </div>
+            <div className='contenedorAbsoluto'>
+                <div className='contenedorInteriorAbsoluto'>
+                    <div className='contenedorBarras'></div>
+                    <div className='contenedorMedio'></div>
+                    <div className='contenedorIdioma'>
+                    {
+                        idioma ? <div className='selectorIdioma'>
+                                    <div className='contenedorInternoIdiomas'>
+                                        <div className='contenedorITA'>
+                                            <div className='contenedorNombre'>
+                                                ITA
+                                            </div>
+                                            <div className='contenedorBandera'>
+                                                <div className='contenedorInternoBandera'>
+                                                    <img src={italia} alt="lenguajeImg"></img>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='contenedorENG'>
+                                            <div className='contenedorNombre'>
+                                                ENG
+                                            </div>
+                                            <div className='contenedorBandera'>
+                                                <div className='contenedorInternoBandera'>
+                                                    <img src={reinoUnido} alt="lenguajeImg"></img>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                : <div></div>
+                    }
                     </div>
                 </div>
             </div>
