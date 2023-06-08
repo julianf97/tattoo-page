@@ -8,22 +8,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import  italia  from "../../assets/img/italia.png"
 import  reinoUnido  from "../../assets/img/reinoUnido.png"
+import { useContext } from 'react'
+import { LenguajeContext } from "../../context/LenguajeContext/LenguajeContext"
 
 export const Navbar = () => {
 
-    const [idioma, setIdioma] = useState(false);
-
-
-    const handleClickIdioma = () => {
-        if( idioma === false ){
-            setIdioma(true)
-        } else {
-            setIdioma(false)
-        }
-    }
-
-
-
+    const { idioma, handleClickModal, handleClickIngles, handleClickItaliano} = useContext(LenguajeContext)
 
     return(
        <div className='contenedorNavbar'>
@@ -33,7 +23,7 @@ export const Navbar = () => {
                 </div>
                 <div className='contenedorMedio'></div>
                 <div className='contenedorIdioma'>
-                    <div onClick={handleClickIdioma} className='contenedorInternoElementosIdioma'>
+                    <div onClick={handleClickModal} className='contenedorInternoElementosIdioma'>
                         <div className='contenedorImg'>
                             <div className='contenedorInternoImg'>
                                 <img src={italia} alt="lenguajeImg"></img>
@@ -55,7 +45,7 @@ export const Navbar = () => {
                     {
                         idioma ? <div className='selectorIdioma'>
                                     <div className='contenedorInternoIdiomas'>
-                                        <div className='contenedorITA'>
+                                        <div onClick={handleClickItaliano}  className='contenedorITA'>
                                             <div className='contenedorNombre'>
                                                 ITA
                                             </div>
@@ -65,7 +55,7 @@ export const Navbar = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='contenedorENG'>
+                                        <div onClick={handleClickIngles} className='contenedorENG'>
                                             <div className='contenedorNombre'>
                                                 ENG
                                             </div>
