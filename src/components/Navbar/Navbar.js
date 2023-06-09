@@ -13,34 +13,53 @@ import { LenguajeContext } from "../../context/LenguajeContext/LenguajeContext"
 
 export const Navbar = () => {
 
-    const { 
-            idioma, 
-            handleClickModal, 
-            handleClickIngles, 
-            handleClickItaliano, 
-            inglesElegido
-            } = useContext(LenguajeContext)
+    const { idioma, handleClickModal, handleClickIngles, handleClickItaliano, inglesElegido } = useContext(LenguajeContext)
 
     return(
        <div className='contenedorNavbar'>
             <div className='contenedorInternoNavbar'>
                 <div className='contenedorBarras'>
                     <FontAwesomeIcon className='barras' icon={faBars}></FontAwesomeIcon>
+                    <div className='contenedorLogoDesktop'></div>
                 </div>
-                <div className='contenedorMedio'></div>
+                <div className='contenedorMedio'>
+                    <div className='contenedorLogoMobile'>
+
+                    </div>
+                    <div className='contenedorNavbarDesktop'>
+                        <div className='contenedorNavbarInteriorDesktop'>
+                            <nav>
+                                <ul>
+                                    {
+                                        inglesElegido ?  <li>BLACK & GRAY</li>
+                                                    :  <li>NERO E GRIGIO</li>
+                                    }
+                                    {
+                                        inglesElegido ? <li>LETTERING</li>
+                                                    :  <li>SCRITTURA</li>
+                                    }
+                                    {
+                                        inglesElegido ? <li>COMMISSIONED ART</li>
+                                                    :  <li>COMMISSIONE ART</li>
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
                 <div className='contenedorIdioma'>
                     <div onClick={handleClickModal} className='contenedorInternoElementosIdioma'>
                         <div className='contenedorImg'>
                             <div className='contenedorInternoImg'>
                                 {
                                     inglesElegido ?  <img className='imagenReinoUnidoElegida' src={reinoUnido} alt="lenguajeImg"></img>
-                                                    : <img src={italia} alt="lenguajeImg"></img>
+                                                : <img src={italia} alt="lenguajeImg"></img>
                                 }
                             </div>
                         </div>
                         {
                             inglesElegido ? <span className='btnIdioma'>ENG </span>
-                                            : <span className='btnIdioma'>ITA </span> 
+                                        : <span className='btnIdioma'> ITA </span> 
                         }
                         {
                             idioma ? <FontAwesomeIcon className='anguloRotado' icon={faAngleRight}></FontAwesomeIcon> 

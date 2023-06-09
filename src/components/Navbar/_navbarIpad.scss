@@ -24,10 +24,29 @@
                     color: rgb(175, 129, 79);
                     font-size: 25px;
                     cursor: pointer;
+                    display: block !important;
+                }
+                .contenedorLogoDesktop{
+                    display: none;
                 }
             }
             .contenedorMedio{
                 width: 800px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .contenedorNavbarDesktop{
+                    display: none !important;
+                }
+                .contenedorLogoMobile{
+                    width: 80px;
+                    height: 100%;
+                    background-image: url("../../../public/img/logo.png"); 
+                    background-color: #00000000; 
+                    background-position: center; 
+                    background-repeat: no-repeat; 
+                    background-size: cover; 
+                }
                 
             }
             .contenedorIdioma{

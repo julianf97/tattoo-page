@@ -10,7 +10,9 @@ export const Secciones = () => {
         <div className='contenedorPrincipalSecciones'>
             <article className='secciones'>
                 <section className='seccion seccion1'>
-
+                    <div className='contenedorSeccion'>
+                        <h3>BLACK & GRAY</h3>
+                    </div>
                 </section>
                 <section className='seccion seccion2'>
 
