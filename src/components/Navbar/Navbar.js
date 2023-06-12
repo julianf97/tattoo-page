@@ -11,16 +11,27 @@ import  italia  from "../../assets/img/italia.png"
 import  reinoUnido  from "../../assets/img/reinoUnido.png"
 import { useContext } from 'react'
 import { LenguajeContext } from "../../context/LenguajeContext/LenguajeContext"
+import { NavbarContext } from "../../context/NavbarContext/NavbarContext"
 
 export const Navbar = () => {
 
     const { idioma, handleClickModal, handleClickIngles, handleClickItaliano, inglesElegido } = useContext(LenguajeContext)
 
+    const { handleClickOpen } = useContext(NavbarContext)
+
     return(
        <div className='contenedorNavbar'>
             <div className='contenedorInternoNavbar'>
                 <div className='contenedorBarras'>
-                    <Hamburger  hideOutline={false} size={25} rounded color="#AF814F"/>
+                <Hamburger rounded onToggle={
+                    toggled => {
+                                
+                                if (toggled) {
+                                        handleClickOpen()
+                                } else {
+                                        handleClickOpen()
+                                }
+                }} hideOutline={true} size={30} color="#AF814F" />
                     <div className='contenedorLogoDesktop'></div>
                 </div>
                 <div className='contenedorMedio'>
