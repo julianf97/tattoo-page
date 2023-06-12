@@ -143,6 +143,9 @@
                 }
                 .contenedorMedio{
                     width: 1000px;
+                    .contenedorNavbarDesktop{
+                        display: none;
+                    }
         
                 }
                 .contenedorIdioma{

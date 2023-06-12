@@ -12,7 +12,7 @@
         .contenedorInternoNavbar{
             width: 99%;
             height: 80%;
-            display: flex;
+            display: flex;  
             .contenedorBarras{
                 width: 166px;
                 height: 100%;
@@ -159,16 +159,66 @@
                 height: 80%;
                 display: flex;
                 .contenedorBarras{
-                    width: 620px;
+                    width: 166px;
                     height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    visibility: hidden;
+                    .menuHamburgesa{
+                        visibility: hidden !important;
+                    }
+                    .contenedorLogoDesktop{
+                        width: 80px;
+                        height: 100%;
+                        background-image: url("../../../public/img/logo.png"); 
+                        background-color: #00000000; 
+                        background-position: center; 
+                        background-repeat: no-repeat; 
+                        background-size: cover; 
+                        visibility: hidden;
+                    }
                 }
                 .contenedorMedio{
-                    width: 1000px;
+                    width: 1200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .contenedorNavbarInteriorDesktop{
+                        height: 30px;
+                        width: 1000px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        nav{
+                            height: 30px;
+                            width: 1000px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            visibility: hidden;
+                            ul{
+                                list-style: none;
+                                display: flex;
+                                justify-content: space-between;
+                                width: 500px;
+                                li{
+                                    color: #fff;
+                                    transition: all 0.2s;
+                                    user-select: none;
+                                    cursor: pointer;
+                                }
+                                li:hover{
+                                    color:  #D19F68
+                                }
+                            }
+                        }
+                    }
             
                 }
                 .contenedorIdioma{
-                    width: 166px;
-                    height: 100%;
+                    width: 166px !important;
+                    height: 100% !important;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -182,6 +232,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        margin-left: 12px;
                         .contenedorInternoIdiomas{
                             width: 90%;
                             height: 90%;

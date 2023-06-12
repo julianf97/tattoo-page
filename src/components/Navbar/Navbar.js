@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import Hamburger from 'hamburger-react'
 import  italia  from "../../assets/img/italia.png"
 import  reinoUnido  from "../../assets/img/reinoUnido.png"
 import { useContext } from 'react'
@@ -19,7 +20,7 @@ export const Navbar = () => {
        <div className='contenedorNavbar'>
             <div className='contenedorInternoNavbar'>
                 <div className='contenedorBarras'>
-                    <FontAwesomeIcon className='barras' icon={faBars}></FontAwesomeIcon>
+                    <Hamburger  hideOutline={false} size={25} rounded color="#AF814F"/>
                     <div className='contenedorLogoDesktop'></div>
                 </div>
                 <div className='contenedorMedio'>
@@ -70,8 +71,35 @@ export const Navbar = () => {
             </div>
             <div className='contenedorAbsoluto'>
                 <div className='contenedorInteriorAbsoluto'>
-                    <div className='contenedorBarras'></div>
-                    <div className='contenedorMedio'></div>
+                    <div className='contenedorBarras'>
+                        <FontAwesomeIcon className='barras' icon={faBars}></FontAwesomeIcon>
+                        <div className='contenedorLogoDesktop'></div>
+                    </div>
+                    <div className='contenedorMedio'>
+                        <div className='contenedorLogoMobile'>
+
+                        </div>
+                        <div className='contenedorNavbarDesktop'>
+                            <div className='contenedorNavbarInteriorDesktop'>
+                                <nav>
+                                    <ul>
+                                    {
+                                        inglesElegido ?  <li>BLACK & GRAY</li>
+                                        :   <li>NERO E GRIGIO</li>
+                                    }
+                                    {
+                                        inglesElegido ? <li>LETTERING</li>
+                                        :  <li>SCRITTURA</li>
+                                    }
+                                    {
+                                        inglesElegido ? <li>COMMISSIONED ART</li>
+                                        :  <li>COMMISSIONE ART</li>
+                                    }
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                     <div className='contenedorIdioma'>
                     {
                         idioma ? <div className='selectorIdioma'>
