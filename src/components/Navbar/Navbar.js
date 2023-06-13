@@ -31,7 +31,7 @@ export const Navbar = () => {
                                 } else {
                                         handleClickOpen()
                                 }
-                }} hideOutline={true} size={30} color="#AF814F" />
+                }} size={30} color="#AF814F" />
                     <div className='contenedorLogoDesktop'></div>
                 </div>
                 <div className='contenedorMedio'>

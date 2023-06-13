@@ -12,18 +12,14 @@ export const NavbarProvider = ( { children } ) => {
         } else {
             setOpen(false)
         }
-
-        console.log(isOpen)
-
     }
-
 
     return(
         
         <NavbarContext.Provider value={{
             isOpen,
             setOpen, 
-            handleClickOpen
+            handleClickOpen,
         }}>
         {children}
         </NavbarContext.Provider>

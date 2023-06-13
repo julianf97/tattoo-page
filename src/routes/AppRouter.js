@@ -11,6 +11,7 @@ import { EndingItaliano } from '../components/EndingItaliano/EndingItaliano';
 import { LenguajeContext } from "../context/LenguajeContext/LenguajeContext";
 import { NavbarContext } from "../context/NavbarContext/NavbarContext";
 import { useContext } from 'react';
+import "./_appRouter.scss"
 
 
 
@@ -19,8 +20,9 @@ export const AppRouter = () => {
     const { inglesElegido } = useContext(LenguajeContext)
     const { isOpen } = useContext(NavbarContext)
 
+
   return (
-    <div className="AppRouter">
+      <div className="AppRouter">
         <Navbar/>
         {
           isOpen ? <NavbarOpen/>
@@ -30,17 +32,17 @@ export const AppRouter = () => {
         <Secciones/>
         {
           inglesElegido ? <Descripcion/>
-                        : <DescripcionItaliano/>
+                    : <DescripcionItaliano/>
         }
         {
           inglesElegido ? <Book/>
-                        : <BookItaliano/>
+                       : <BookItaliano/>
         }
         {
           inglesElegido ? <Ending/>
-                        : <EndingItaliano/>
+                       : <EndingItaliano/>
         }
-    </div>    
+      </div> 
   );
 }
 
