@@ -2,6 +2,7 @@ import { Presentacion } from '../components/Presentacion/Presentacion';
 import { Navbar } from '../components/Navbar/Navbar'
 import { NavbarOpen } from '../components/Navbar/NavbarOpen'
 import { Secciones } from '../components/Secciones/Secciones';
+import { SeccionesItaliano } from '../components/SeccionesItaliano/SeccionesItaliano';
 import { Descripcion } from '../components/Descripcion/Descripcion';
 import { DescripcionItaliano } from '../components/DescripcionItaliano/DescripcionItaliano';
 import { Book } from '../components/Book/Book';
@@ -29,7 +30,10 @@ export const AppRouter = () => {
                 : <div></div> 
         }
         <Presentacion/>
-        <Secciones/>
+        {
+          inglesElegido ? <Secciones/>
+                        : <SeccionesItaliano/>
+        }
         {
           inglesElegido ? <Descripcion/>
                     : <DescripcionItaliano/>

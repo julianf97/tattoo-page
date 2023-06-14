@@ -1,33 +1,34 @@
 import React from 'react'
-import Zoom from 'react-reveal/Zoom';
 import './_seccionesMobile.scss'
 import './_seccionesIpad.scss'
 import './_seccionesDesktop.scss'
+import Zoom from 'react-reveal/Zoom';
 
 
-export const Secciones = () => {
+export const SeccionesItaliano = () => {
+
 
     return(
         <div className='contenedorPrincipalSecciones'>
             <article className='secciones'>
-            <section className='seccion seccion1'>
+                <section className='seccion seccion1'>
                     <div className='contenedorSeccion'>
                         <Zoom down>
-                            <h3>BLACK AND GREY</h3>
+                            <h3>NERO E GRIGIO</h3>
                         </Zoom>
                     </div>
                 </section>
                 <section className='seccion seccion2'>
                     <div className='contenedorSeccion'>
                         <Zoom down>
-                            <h3>LETTERING</h3>
+                            <h3>SCRITTURA</h3>
                         </Zoom>
                     </div>
                 </section>
                 <section className='seccion seccion3'>
                     <div className='contenedorSeccion'>
                         <Zoom down>
-                            <h3>COMMISSIONED ART</h3>
+                            <h3>COMMISSIONE ART</h3>
                         </Zoom>
                     </div>
                 </section>
